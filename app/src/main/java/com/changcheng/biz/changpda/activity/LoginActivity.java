@@ -70,6 +70,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         pwdCanSeeIv.setOnClickListener(this);
 
         //isUpdata();
+
     }
 
     @Override

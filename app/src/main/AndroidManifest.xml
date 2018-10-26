@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.changcheng.biz.changpda">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--安装APK部分手机安装不了-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".activity.MainActivity"
+            android:launchMode="singleTask">
+
+        </activity>
+
+        <activity android:name=".activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.InputActivity"/>
+        <activity android:name=".activity.InputReceiptActivity"/>
+        <!--出库-->
+        <activity android:name=".activity.OutStorageActivity"/>
+        <activity android:name=".activity.SelectStoreActivity"/>
+        <activity android:name=".activity.OutGoodsActivity"/>
+        <activity android:name=".activity.OutStorageDetailActivity"/>
+        <activity
+            android:name=".activity.NumStorageActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".activity.StorageDetailActivity"/>
+
+        <!--盘点-->
+        <activity android:name=".activity.NotInventoryActivity"/>
+        <activity android:name=".activity.SelectIntoryActivity"/>
+        <activity android:name=".activity.SelectGoodsActivity"/>
+        <!--盘点明细-->
+        <activity android:name=".activity.InventoryDetailActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".activity.IntoryGoodsActivity"/>
+
+        <activity android:name=".activity.ReturnGoodsActivity"/>
+        <activity android:name=".activity.SelcetFactoryActivity"/>
+
+        <activity android:name=".activity.ReportedLossActivity"/>
+        <activity android:name=".activity.SelectLossActivity"/>
+        <activity android:name=".activity.LossGoodsActivity"/>
+        <activity android:name=".activity.LossDetailActivity"/>
+
+        <activity android:name=".activity.ScanActivity"/>
+
+        <service android:name=".utils.DownLoadService" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/act_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/heard_layout" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:background="@color/white"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_edittext"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_margin="15dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/search"
+                android:layout_marginLeft="5dp"/>
+
+            <EditText
+                android:id="@+id/et_search_comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:hint="请输入查询条件"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.jwenfeng.library.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/ptr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_goods_lv"
+            android:dividerHeight="0.5dp">
+
+        </ListView>
+
+    </com.jwenfeng.library.pulltorefresh.PullToRefreshLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_titlebar"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>

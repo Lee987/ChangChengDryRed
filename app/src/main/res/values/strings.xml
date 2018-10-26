@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">长城荟PDA</string>
+    <string name="in_put">入库单签收</string>
+    <string name="out_put">出库</string>
+    <string name="return_goods">退货</string>
+    <string name="reported_loss">报损</string>
+    <string name="Inventory">盘点</string>
+    <string name="sacn_two">二维码纠正</string>
+
+    <string name="act_input">待入库订单</string>
+    <string name="act_not_inventory">未完成的盘点任务</string>
+    <string name="txt_back">返回</string>
+    <string name="single">单盘</string>
+    <string name="all">全盘</string>
+
+    <string name="btn_cancel">取消</string>
+    <string name="btn_confirm">确定</string>
+    <string name="text_signle_month">单月选择</string>
+    <string name="text_more_than_month">多月选择</string>
+    <string name="text_please_choose_date">请选择日期</string>
+    <string name="text_please_choose_date_h">请选择时间范围</string>
+
+    <string name="text_money_date">%1$s至%2$s</string>
+    <string name="error">网络请求错误！</string>
+    <string name="no_finish">您有未完成任务！</string>
+    <string name="click_exit_app">再按一次退出程序</string>
+    <string name="txt_loss">破损</string>
+    <string name="txt_out_time">过期</string>
+    <string name="txt_stor_num">库存（%d）</string>
+    <string name="dialog_download">\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000下载进度\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000</string>
+    <string name="text_apk_path_isempty">安装包的路径不正确不能进行更新，请联系管理员</string>
+    <string name="text_update_error">更新异常，请联系管理员</string>
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_goods_name"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:padding="10dp"
+            android:textColor="@color/color_121212"
+            android:textSize="@dimen/sp_10"
+            android:background="@color/color_FCFAF3"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/color_121212"
+            android:textSize="@dimen/sp_10"
+            android:background="@color/color_FEFCF7"/>
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/color_121212"
+            android:textSize="@dimen/sp_10"
+            android:background="@color/color_FCFAF3"/>
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/color_121212"
+            android:textSize="@dimen/sp_10"
+            android:background="@color/color_FEFCF7"/>
+
+        <TextView
+            android:id="@+id/tv_standard"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:padding="10dp"
+            android:textColor="@color/color_121212"
+            android:textSize="@dimen/sp_10"
+            android:gravity="center"
+            android:background="@color/color_FCFAF3"/>
+
+    </LinearLayout>
+
+</LinearLayout>

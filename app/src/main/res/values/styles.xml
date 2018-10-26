@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_transparent</item>
+        <item name="colorPrimaryDark">@color/color_transparent</item>
+        <item name="colorAccent">@color/color_transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+
+    <style name="AppTheme.Main" parent="AppTheme" />
+
+    <style name="progress_dialog_loading" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="MatchWrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--login-->
+    <style name="login_common_margin" parent="MatchWrap">
+        <item name="android:layout_marginLeft">@dimen/dp_40</item>
+        <item name="android:layout_marginRight">@dimen/dp_40</item>
+    </style>
+
+    <style name="login_et_input" parent="login_common_margin">
+        <item name="android:background">@null</item>
+        <item name="android:drawablePadding">@dimen/dp_10</item>
+        <item name="android:padding">@dimen/dp_5</item>
+        <item name="android:drawableBottom">@drawable/divider_hor_line</item>
+        <item name="android:textSize">@dimen/common_text_size</item>
+        <item name="android:textColorHint">@color/color_edit_hint_9</item>
+        <item name="android:textColor">@color/color_edit_text</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <declare-styleable name="HorizontalProgressBarWithNumber">
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+        <attr name="progress_text_offset" format="dimension" />
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <!-- 设置无边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置完全透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--<item name="android:windowBackground">@drawable/corners_bg</item>-->
+        <!-- 设置屏幕变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--<item name="android:background">@android:color/transparent</item>-->
+        <!--<item name="android:backgroundDimAmount">0.6</item>-->
+    </style>
+
+</resources>

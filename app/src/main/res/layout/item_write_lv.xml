@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_goods_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color_333333"
+            android:background="@color/color_FCFAF3"/>
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color_121212"
+            android:background="@color/color_FEFCF7"
+            android:text=""/>
+
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/color_121212"
+            android:textSize="@dimen/sp_12"
+            android:text=""/>
+
+        <EditText
+            android:id="@+id/et_num"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="点击输入"
+            android:inputType="number"
+            android:textColorHint="@color/color_D3D3D3"
+            android:textColor="@color/color_333333"
+            android:background="@color/color_FEFCF7"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -189,7 +189,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                 DownloadUtil.get().setCancelDownload(false);
                 Intent intent = new Intent();
                 intent.setClass(LoginActivity.this, DownLoadService.class);
-                intent.putExtra(DownLoadService.APK_PATH, "http://greatewall.oos-bj2.ctyunapi.cn/upload/file/1536057730210_1203ab53-5069-4f3c-a595-99753340b0e2.apk");//http://greatewall.oos-bj2.ctyunapi.cn/upload/file/1536057730210_1203ab53-5069-4f3c-a595-99753340b0e2.apk
+                intent.putExtra(DownLoadService.APK_PATH, "http://greatewall.oos-bj2.ctyunapi.cn/upload/file/1540781263199_a515262f-82d7-41e3-9c12-855f42c5d533.apk");//http://greatewall.oos-bj2.ctyunapi.cn/upload/file/1536057730210_1203ab53-5069-4f3c-a595-99753340b0e2.apk
                 startService(intent);
             }
 

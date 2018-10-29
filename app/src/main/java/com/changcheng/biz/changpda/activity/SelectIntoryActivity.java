@@ -119,6 +119,7 @@ public class SelectIntoryActivity extends BaseActivity implements View.OnClickLi
         showLoadDialog();
         RequestEntity entity = new RequestEntity();
         RequestEntity.TmInventoryVo inventoryVo = new RequestEntity.TmInventoryVo();
+        inventoryVo.setInventoryNumber("");
         inventoryVo.setInventoryName(name);
         inventoryVo.setInventoryType(1);
         inventoryVo.setStatus(1);

@@ -19,6 +19,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 
+import com.android.scanner.impl.ReaderManager;
 import com.changcheng.biz.changpda.R;
 import com.changcheng.biz.changpda.utils.StatusBarUtil;
 import com.changcheng.biz.changpda.view.CustomProgressDialog;
@@ -34,6 +35,7 @@ import static com.changcheng.biz.changpda.broadcast.SystemBroadCast.SCN_CUST_EX_
  */
 
 public abstract class BaseActivity extends FragmentActivity {
+	private ReaderManager mReaderManager = null;
 	/** 是否沉浸状态栏 **/
 	private boolean isSetStatusBar = true;
 	/** 是否允许全屏 **/
@@ -88,6 +90,8 @@ public abstract class BaseActivity extends FragmentActivity {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		mReaderManager = ReaderManager.getInstance();
+		mReaderManager.setOutPutMode(2);
 		// Register receiver
 		IntentFilter intentFilter = new IntentFilter(SCN_CUST_ACTION_SCODE);
 		registerReceiver(scanDataReceiver,intentFilter);

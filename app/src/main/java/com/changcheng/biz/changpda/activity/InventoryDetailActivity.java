@@ -195,7 +195,7 @@ public class InventoryDetailActivity extends BaseActivity implements BaseRefresh
                 final EditText et_num = helper.getConverView().findViewById(R.id.et_num);
 
 
-                scanBottom.get(helper.getPosition()).setNumbers(0);
+                scanBottom.get(helper.getPosition()).setNumbers(-1);
 
                 et_num.setOnTouchListener(new View.OnTouchListener() {
                     @Override
@@ -205,34 +205,40 @@ public class InventoryDetailActivity extends BaseActivity implements BaseRefresh
                         et_num.onTouchEvent(event); // call native handler
                         et_num.setInputType(inType); // restore input type
                         et_num.setSelection(et_num.getText().length());
+
                         return true;
                     }
                 });
-                et_num.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    et_num.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-                    }
-
-                    @Override
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable s) {
-                        String strNum = et_num.getText().toString();
-                        int num;
-                        if (TextUtils.isEmpty(strNum)) {
-                            num = 0;
-                        } else {
-                            num = Integer.parseInt(strNum);
                         }
 
-                        scanBottom.get(helper.getPosition()).setNumbers(num);
-                    }
-                });
-            }
+                        @Override
+                        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable s) {
+                            try {
+                                String strNum = s.toString();
+                                int num = 0;
+                                if (TextUtils.isEmpty(strNum)) {
+                                    num = 0;
+                                } else {
+                                    num = Integer.parseInt(strNum);
+                                }
+                                scanBottom.get(helper.getPosition()).setNumbers(num);
+                            }catch (Exception e){
+                                //ToastUtils.showToast(InventoryDetailActivity.this,"先进行扫码操作！",2000);
+                                scanBottom.get(helper.getPosition()).setNumbers(-1);
+                            }
+                        }
+                    });
+                }
+
         };
 
         lv_bottom.setAdapter(adapterBottom);
@@ -346,7 +352,7 @@ public class InventoryDetailActivity extends BaseActivity implements BaseRefresh
 
         List<RequestEntity.TmInventoryDetailVoList> lists = new ArrayList<>();
         for (int i = 0; i < scanBottom.size(); i++) {
-            if (scanBottom.get(i).getNumbers() <= 0) {
+            if (scanBottom.get(i).getNumbers() < 0) {
                 ToastUtils.showToast(InventoryDetailActivity.this, "请输入数量", 2000);
                 return;
             }
@@ -424,7 +430,7 @@ public class InventoryDetailActivity extends BaseActivity implements BaseRefresh
 
         List<RequestEntity.TmInventoryDetailVoList> lists = new ArrayList<>();
         for (int i = 0; i < scanBottom.size(); i++) {
-            if (scanBottom.get(i).getNumbers() <= 0) {
+            if (scanBottom.get(i).getNumbers() < 0) {
                 ToastUtils.showToast(InventoryDetailActivity.this, "请输入数量", 2000);
                 hideLoadDialog();
                 return;

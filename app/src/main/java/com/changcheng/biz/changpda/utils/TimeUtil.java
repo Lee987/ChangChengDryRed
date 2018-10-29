@@ -7,6 +7,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TimeUtil {
 
@@ -90,5 +92,11 @@ public class TimeUtil {
                 break;
         }
         return season;
+    }
+    public static String getStrNum(String args) {
+        String regEx = "[^0-9]";
+        Pattern pattern = Pattern.compile(regEx);
+        Matcher matcher = pattern.matcher(args);
+        return matcher.replaceAll("").trim();
     }
 }

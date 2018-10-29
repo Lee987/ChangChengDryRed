@@ -181,7 +181,7 @@ public class ScanActivity extends BaseActivity implements BaseRefreshListener,Ad
             public void onResponse(String response) {
                 Logger.d(TAG, response);
                 BoxCodeEntity entity = JSONObject.parseObject(response, BoxCodeEntity.class);
-                if ("200".equals(entity.getCode())) {
+                if ("200".equals(entity.getCode())&&(entity.getData()!=null)) {
                     tv_name.setText(entity.getData().getProName());
                     tv_code.setText(entity.getData().getProCode());
                     for (GoodsEntity.DataBean.RowsBean bean : listDatas) {//全部设为未选中

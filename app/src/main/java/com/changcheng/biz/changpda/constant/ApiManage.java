@@ -1,14 +1,15 @@
 package com.changcheng.biz.changpda.constant;
 
 public class ApiManage {
-    public static final String baseUrl = "http://125.64.5.82:8081/eisp/";
+    public static final String baseUrl = "http://106.37.75.193:8910/";//正式
+//    public static final String baseUrl = "http://125.64.5.82:8081/eisp/";//测试
+    //    public static final String baseUrl = "http://192.168.10.95:8080/";//233,95本地
     public static final String outTreasury = "restOutTreasuryController.do?";//出库
     public static final String restTmInventory = "restTmInventoryController.do?";//盘点
     public static final String returnGoods = "restReturnGoodsController.do?";//退货
     public static final String receipt = "restWarehouseReceipt.do?";//入库
     public static final String reportLoss = "restTmReportLossController.do?";//报损
     public static final String barcode = "restBarcodeCorrectLog.do?";//二维码纠正
-//    public static final String baseUrl = "http://192.168.10.95:8080/";//233,95
     /**
      * 出库
      */

@@ -92,6 +92,7 @@ public abstract class BaseActivity extends FragmentActivity {
 		}
 		mReaderManager = ReaderManager.getInstance();
 		mReaderManager.setOutPutMode(2);
+		mReaderManager.disableAll1DCodeTypes();
 		// Register receiver
 		IntentFilter intentFilter = new IntentFilter(SCN_CUST_ACTION_SCODE);
 		registerReceiver(scanDataReceiver,intentFilter);
